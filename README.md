@@ -3,16 +3,22 @@
 > 본 내용은 한빛미디어에서 출간한 제 책(개발자 기술 면접 노트)의 일부 내용을 보강하기 위해서 만든 코딩 가이드 입니다.<br>
 > 설명에서는 타이핑을 줄이기 위해서 존대를 생략했으니 양해 바랍니다.<br> 
 > 만약 내용에 문제가 있거나 오/탈자가 있을 경우 villainscode@gmail.com으로 메일 부탁드립니다.
-> 현재 버전 1.0.0v (2024.05.09)
-> - 개정 이력 
->  - 더 다양한 코드 용례를 추가할 때 마다 개정 이력은 업데이트 될 예정입니다.
+> 
 > 
 > - Instagram - [https://www.instagram.com/codevillains](https://www.instagram.com/codevillains)
 > - email - [villainscode@gmail.com](mailto:villainscode@gmail.com)
 > - Yes24 - https://www.yes24.com/Product/Goods/125554439
 > - KyoboBooks - https://product.kyobobook.co.kr/detail/S000212738756
 
-# 목차 
+>
+> 개정 이력
+> 
+> 현재 버전 1.0.0v (2024.05.09)
+> -  더 다양한 코드 용례를 추가할 때 마다 개정 이력은 업데이트 될 예정입니다.
+>
+
+- [Coding Guide for Java Programmer By 코드빌런](#coding-guide-for-java-programmer-by-----)
+- [목차](#--)
 - [📖 코딩 가이드](#---------)
   * [들어가기에 앞서](#--------)
   * [소개](#--)
@@ -24,41 +30,59 @@
   * [나쁜 코드](#-----)
   * [좋은 코드를 작성하는 몇가지 규칙들](#-------------------)
 - [의미 있는 이름](#--------)
-    + [1. 그릇된 정보를 피해라.](#1------------)
-    + [2. 의미있게 구분하라.](#2----------)
-    + [3. 검색하기 쉬운 이름, 발음하기 쉬운 이름을 사용하라.](#3-----------------------------)
-    + [4. 클래스 이름 규칙](#4----------)
-    + [5. 메서드 이름 규칙](#5----------)
-    + [6. 한 개념에 한 단어를 사용하라.](#6-----------------)
+  + [1. 그릇된 정보를 피해라.](#1------------)
+  + [2. 의미있게 구분하라.](#2----------)
+  + [3. 검색하기 쉬운 이름, 발음하기 쉬운 이름을 사용하라.](#3-----------------------------)
+  + [4. 클래스 이름 규칙](#4----------)
+  + [5. 메서드 이름 규칙](#5----------)
+  + [6. 한 개념에 한 단어를 사용하라.](#6-----------------)
 - [함수 (메서드)](#--------)
-    + [1. switch 문](#1-switch--)
-    + [2. 서술적인 이름을 사용하라.](#2--------------)
-    + [3. 메서드 인수](#3-------)
-    + [4. 명령과 조회를 분리해라.](#4-------------)
-    + [5. DRY (Don't Repaet Yourself)](#5-dry--don-t-repaet-yourself-)
-    + [6. 주석은 코드로 대체할 수 있어야 한다.](#6---------------------)
+  + [1. switch 문](#1-switch--)
+  + [2. 서술적인 이름을 사용하라.](#2--------------)
+  + [3. 메서드 인수](#3-------)
+  + [4. 명령과 조회를 분리해라.](#4-------------)
+  + [5. DRY (Don't Repaet Yourself)](#5-dry--don-t-repaet-yourself-)
+  + [6. 주석은 코드로 대체할 수 있어야 한다.](#6---------------------)
 - [형식 맞추기](#------)
 - [객체와 자료 구조](#---------)
-    + [디미터의 법칙 : 오직 하나의 점(.)에 의해 호출되는 메서드만 호출해야 한다.](#------------------------------------------)
-    + [자료 전달 객체](#--------)
+  + [디미터의 법칙 : 오직 하나의 점(.)에 의해 호출되는 메서드만 호출해야 한다.](#------------------------------------------)
+  + [자료 전달 객체](#--------)
 - [오류 처리](#-----)
-    + [오류 코드보다 예외를 사용하라.](#----------------)
-    + [null을 반환하지 마라.](#null---------)
+  + [오류 코드보다 예외를 사용하라.](#----------------)
+  + [null을 반환하지 마라.](#null---------)
 - [클래스](#---)
-    + [클래스 작성 규칙](#---------)
-    + [클래스는 작게 설계 해야한다.](#---------------)
-    + [SRP](#srp)
-    + [응집도(Cohesion)](#----cohesion-)
+  + [클래스 작성 규칙](#---------)
+  + [클래스는 작게 설계 해야한다.](#---------------)
+  + [SRP](#srp)
+  + [응집도(Cohesion)](#----cohesion-)
 - [코드 기본 사용 예제 모음](#--------------)
-    + [규칙 1. 파일은 UTF-8로 인코딩 한다.](#---1-----utf-8--------)
-    + [규칙 2. 패키지 이름은 소문자이고, 언더라인을 쓰지 않는다.](#---2----------------------------)
-    + [규칙 3. 클래스 이름은 UpperCamelCase (PascalCase) 로 작성한다. 단어와 단어 사이에는 대문자로 표기하고 명사로 명명한다.](#---3---------uppercamelcase--pascalcase---------------------------------------)
-    + [규칙 4 .메소드 이름은 lowerCamelCase 로 작성한다. 메소드명은 동사 또는 동사구이다.](#---4---------lowercamelcase-------------------------)
-    + [규칙 5. 너무 짧은 변수명, 메소드명은 지양하고 의미있는 이름으로 지어야 한다. 메소드 명이나 변수명은 의미를 전달하는 용도**로 작성해야 한다.](#---5---------------------------------------------------------------------------)
-    + [규칙 6. 상수는 CONST_CASE 이다. (UPPER_SNAKE_CASE)](#---6-----const-case-----upper-snake-case-)
-    + [규칙 7. 상수가 아닌 필드는 lowerCamelCase로 작성한다.](#---7------------lowercamelcase------)
-    + [규칙 8. 변수는 lowerCamelCase로 작성한다.](#---8-----lowercamelcase------)
-- [Usage](#usage)
+  + [규칙 1. 파일은 UTF-8로 인코딩 한다.](#---1-----utf-8--------)
+  + [규칙 2. 패키지 이름은 소문자이고, 언더라인을 쓰지 않는다.](#---2----------------------------)
+  + [규칙 3. 클래스 이름은 UpperCamelCase (PascalCase) 로 작성한다. 단어와 단어 사이에는 대문자로 표기하고 명사로 명명한다.](#---3---------uppercamelcase--pascalcase---------------------------------------)
+  + [규칙 4 .메소드 이름은 lowerCamelCase 로 작성한다. 메소드명은 동사 또는 동사구이다.](#---4---------lowercamelcase-------------------------)
+  + [규칙 5. 너무 짧은 변수명, 메소드명은 지양하고 의미있는 이름으로 지어야 한다. 메소드 명이나 변수명은 의미를 전달하는 용도**로 작성해야 한다.](#---5---------------------------------------------------------------------------)
+  + [규칙 6. 상수는 CONST_CASE 이다. (UPPER_SNAKE_CASE)](#---6-----const-case-----upper-snake-case-)
+  + [규칙 7. 상수가 아닌 필드는 lowerCamelCase로 작성한다.](#---7------------lowercamelcase------)
+  + [규칙 8. 변수는 lowerCamelCase로 작성한다.](#---8-----lowercamelcase------)
+- [Usage (코드 예제 모음)](#usage-----------)
+  + [1. 괄호는 Egyptian brackets 을 따른다.**](#1-------egyptian-brackets--------)
+  + [2.  빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다. ](#2----------block-like-construct---------------------------------------)
+  + [3.  공백과 빈줄 ](#3-----------)
+  + [4.  Static Factory Method 의 관행적인 명명 ](#4---static-factory-method------------)
+  + [5.  List 타입에서 빈 컬렉션을 반환할때는 null이나 new 생성 리스트 타입 보다는 Empty Collection을 사용하는것이 GC에 유리하다. ](#5---list-------------------null---new---------------empty-collection---------gc--------)
+  + [6.  foreach 루프에서 콜렉션의 요소를 추가하거나 삭제하지 말것 ](#6---foreach------------------------------)
+  + [7.  Key, Value 콜렉션에서 null이 저장되는지 체크해두어야 한다. ](#7---key--value-------null-------------------)
+  + [8.  Thread ](#8---thread--)
+  + [9.  String 타입에 적절하지 않은 데이터를 표기하지 말아야 한다. ](#9---string-------------------------------)
+  + [10.  String의 초기화에는 StringUtils.EMPTY을 사용하는 것을 권장한다. ](#10---string--------stringutilsempty----------------)
+  + [11.  불필요한 연산은 사용하지 말자. ](#11---------------------)
+  + [12.  Optional 사용 ](#12---optional-----)
+  + [13.  Predicate과 Valdator 구분해서 사용 ](#13---predicate--valdator----------)
+  + [14.  변수가 너무 많은 클래스 구조는 별도의 객체로 분리하자. ](#14-----------------------------------)
+  + [15.  가급적 예외를 구체화 한다. ](#15-------------------)
+  + [16.  짧은 try ~ catch 블럭 권장 ](#16------try---catch--------)
+  + [17.  SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다. ](#17---springframework------------util--------------)
+  + [18.  Spring Annotation의 적절한 사용 ](#18---spring-annotation----------)
   * [DTO (Converter vs Mapper)](#dto--converter-vs-mapper-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -88,7 +112,7 @@
 💡 개요
 
 팀 내 코드리뷰를 위한 가이드를 만들어서 네이밍, 코드 준수 사항의 의사결정 횟수를 줄이고 단순하고 유연한 통일감 있는 코드를 지향함으로써 보다 효율적인 팀 코드 문서를 생산한다.
-****
+
 
 - 새로 합류한 멤버도 팀의 가이드 라인을 준수할 수 있도록, 코딩 가이드 + 코드 리뷰 가이드를 작성한다.
 - 코드의 네이밍만으로도 기능을 알수 있도록 작성한다. 
@@ -877,11 +901,11 @@ static final String[] nonEmptyArray = {"these", "can", "change"};
 
 임시 변수 (반복문을 순회하는 경우) 라도 가급적 한글자의 변수명 보다는 의미가 있는 이름으로 짓는것이 낫다.
 
-# Usage
+# Usage (코드 예제 모음)
 
 ---
 
-괄호는 **Egyptian brackets 을 따른다.**
+### 1. 괄호는 **Egyptian brackets 을 따른다.**
 
 ```java
 return () -> {
@@ -907,7 +931,7 @@ return new MyClass() {
 };
 ```
 
-**빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다.**
+### 2. **빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다.**
 
 ```java
 // 가능
@@ -922,14 +946,14 @@ try {
 } catch (Exception e) {}
 ```
 
-**공백과 빈줄**
+### 3. **공백과 빈줄**
 
 - 들여쓰기 (Indentation)은 4칸의 공백이어야 한다. (4 spaces key)
 - “if”, “while”, “return”, “catch”, “switch”, “for” 등의 키워드와 이어지는 괄호에는 공백이 있어야 한다.
 - 세미콜론, 쉼표 뒤에는 공백이 있어야 한다.
 - 코드의 주요 부분을 식별하기 위해 빈 줄을 넣어준다. 예를 들어, 변수 선언 부분과 변수를 이용한 로직이 들어간다면 이 부분은 구분을 해주기 위해 빈 줄을 삽입해주는것이 좋다.
 
-**Static Factory Method 의 관행적인 명명**
+### 4. **Static Factory Method 의 관행적인 명명**
 
 - from: 하나의 매개변수를 받아서 해당 타입의 인스턴스를 생성 (형변환)
 - valueOf : 매개변수와 동일한 값을 갖는 인스턴스를 반환
@@ -940,7 +964,7 @@ try {
 - getType: getInstance와 같으나 호출하는 클래스가 아닌 다른 타입의 인스턴스를 반환할때 사용
 - newType — newInstance와 비슷하지만 호출하는 클래스가 아닌 다른 타입의 인스턴슬 반환할 때 사용. Type은 팩토리 메서드에서 반환된 객체의 유형을 나타낸다.
 
-**List 타입에서 빈 컬렉션을 반환할때는 null이나 new 생성 리스트 타입 보다는 Empty Collection을 사용하는것이 GC에 유리하다.**
+### 5. **List 타입에서 빈 컬렉션을 반환할때는 null이나 new 생성 리스트 타입 보다는 Empty Collection을 사용하는것이 GC에 유리하다.**
 
 ```java
 List<Integer> list = new ArrayList();
@@ -954,7 +978,7 @@ Set<Integer> set = Collections.emptySet();
 Map<Integer,Integer> map = Collections.emptyMap()
 ```
 
-**foreach 루프에서 콜렉션의 요소를 추가하거나 삭제하지 말것**
+### 6. **foreach 루프에서 콜렉션의 요소를 추가하거나 삭제하지 말것**
 
 - Iterator 를 통해 요소를 조작하도록 한다.
 
@@ -979,7 +1003,7 @@ while (it.hasNext()) {
 }
 ```
 
-**Key, Value  콜렉션에서 null이 저장되는지 체크해두어야 한다.**
+### 7. **Key, Value 콜렉션에서 null이 저장되는지 체크해두어야 한다.**
 
 | Collection | Key | Value | Super | Note |
 | --- | --- | --- | --- | --- |
@@ -988,7 +1012,7 @@ while (it.hasNext()) {
 | TreeMap | Null is not allowed | Null is allowed | AbstractMap | Thread-unsafe |
 | HashMap | Null is allowed | Null is allowed | AbstractMap | Thread-unsafe |
 
-**Thread**
+### 8. **Thread**
 
 의미 있는 스레드 이름은 오류 정보를 추적하는 데 도움이 되므로 스레드 또는 스레드 풀을 생성할 때 이름을 지정하기를 추천한다.
 
@@ -1006,7 +1030,7 @@ public class TimerTaskThread extends Thread {
 - 스레드 풀을 사용하면 스레드 생성 및 소멸 시간을 줄이고 시스템 리소스를 절약할 수 있다.
 - 스레드 풀을 사용하지 않으면 유사한 스레드가 많이 생성되어 "메모리 부족" 또는 오버 스위칭 문제가 발생한다.
 
-**String 타입에 적절하지 않은 데이터를 표기하지 말아야 한다.**
+### 9. **String 타입에 적절하지 않은 데이터를 표기하지 말아야 한다.**
 
 ```java
 String value = “True”; // bad
@@ -1016,7 +1040,7 @@ String value = “True”; // bad
 boolean value = “true”; // good 
 ```
 
-**String의 초기화에는 StringUtils.EMPTY을 사용하는 것을 권장한다.**
+### 10. **String의 초기화에는 StringUtils.EMPTY을 사용하는 것을 권장한다.**
 
 ```java
 String value = “”; // bad 
@@ -1026,7 +1050,7 @@ String value = “”; // bad
 String value = StringUtils.EMPTY; // good 
 ```
 
-**불필요한 연산은 사용하지 말자.**
+### 11. **불필요한 연산은 사용하지 말자.**
 
 ```java
 public class BadExample {
@@ -1054,7 +1078,56 @@ public class GoodExample {
 }
 ```
 
-**변수가 너무 많은 클래스 구조는 별도의 객체로 분리하자.**
+
+### 12. **Optional 사용**
+
+Exception 혹은 null을 반환하는 method에는 Optional을 사용한다.
+
+- Optional 값은 postfix로 Optional을 사용한다. <br>
+- Exception은 정말 Exception이 필요한 부분에서 사용한다. 정상적인 흐름을 통제하기 위해서는 Exception 보다는 Optional을 사용한다.
+- Optional은 null을 반환될 가능성이 있다는 것을 명시적으로 제시한다.
+- Collection을 반환하는 경우에는 Optional을 사용하지 않는다.
+
+```java
+public ExportService getExportRequest() {
+    ...
+    ExportService exportInfo = getExportRequest();
+    if(exportInfo == null){ // bad 
+        ...
+    }
+}
+```
+```java
+public Optional<ExportService> getExportRequest(){
+    ...
+    Optional<ExportService> exportInfoOptional = getExportRequest();
+    if(exportInfoOptional.isEmpty()){
+        // handling the null
+    }
+    ExportService exportInfo = exportInfoOptional.get();
+}
+```
+
+### 13. **Predicate과 Valdator 구분해서 사용**
+Predicate 와 Validator 의 용도가 다르다.
+
+Predicate
+- https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html
+- Represents a predicate (boolean-valued function) of one argument.
+
+
+Validator
+- https://en.wikiversity.org/wiki/Object-Oriented_Programming/Validation
+- Validate data Generate and handle exceptions Use assertions to validate parameter assumptions
+
+
+그러므로 정리하면
+
+Predicate는 1개의 arg 을 받아서 true/false 리턴하는 용도으로 사용한다. 
+
+Validator는 데이타 유효성을 판단하는 용도으로 경우에 따라서 exception 발생시킨다. 
+
+### 14. **변수가 너무 많은 클래스 구조는 별도의 객체로 분리하자.**
 
 ```java
 public class BadExample { //bad 
@@ -1069,7 +1142,7 @@ public class BadExample { //bad
 }
 ```
 
-**가급적 예외를 구체화 한다.**
+### 15. **가급적 예외를 구체화 한다.**
 
 ```java
 public class GoodExample { // good 
@@ -1080,6 +1153,7 @@ public class GoodExample { // good
     }
 }
 ```
+
 
 ```java
 public class BadExample {
@@ -1101,7 +1175,7 @@ public class GoodExample {
 }
 ```
 
-**짧은 try ~ catch 블럭 권장**
+### 16. **짧은 try ~ catch 블럭 권장**
 
 가독성면에서 try catch 블록은 짧아야 하며, 가급적 `exception`  블럭만 처리하여 가독성을 확보해야 한다.
 
@@ -1136,11 +1210,29 @@ void tryCatchBlock() { // good
 }
 ```
 
-**SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다.**
+이에 대한 설명으로는 아래 링크를 참고한다.
+
+tight try catch block (https://stackoverflow.com/questions/2633834/should-java-try-blocks-be-scoped-as-tightly-as-possible)
+```text
+the size of a try block makes no difference in performance. Performance is affected by actually raising exceptions at runtime, and that's independent of the size of the try block.
+
+However, keeping try blocks small can lead to better programs.
+
+You might catch exceptions to recover and proceed, or you might catch them simply to report them to the caller (or to a human, via some UI).
+
+In the first case, failures from which you can recover are often very specific, and this leads to smaller try blocks.
+
+In the second case, where an exception is caught so that it can be wrapped by another exception and re-thrown, or displayed to the user, small try blocks mean that you know more precisely which operation failed, and the higher-level context in which that call was made. This allows you to create more specific error reports.
+```
+
+
+
+
+### 17. **SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다.**
 
 - 이는 SpringFramework 내부에서 쓰고자 만든것으로, 만약 Utils성격의 클래스를 쓰고 싶다면 Apache Commons StringUtils를 사용해야 한다.
 
-**Spring Annotation의 적절한 사용**
+### 18. **Spring Annotation의 적절한 사용**
 
 - *@Component* 는 일반적인 스프링 빈으로 등록된(관리하는) 컴포넌트를 의미한다.
 - *@Service @Controller, @Repository 등은 Component 임과 동시에 세부적인 기능을 구분하는 명시를 위한 어노테이션이다.*
