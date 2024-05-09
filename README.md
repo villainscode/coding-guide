@@ -17,7 +17,7 @@
 
 ## 소개
 
-<img src="./book_600.png" width="500">
+<img src="./book_600.png" width="400">
 
 
 >
