@@ -3,6 +3,10 @@
 > 본 내용은 한빛미디어에서 출간한 제 책(개발자 기술 면접 노트)의 일부 내용을 보강하기 위해서 만든 코딩 가이드 입니다.<br>
 > 설명에서는 타이핑을 줄이기 위해서 존대를 생략했으니 양해 바랍니다.<br> 
 > 만약 내용에 문제가 있거나 오/탈자가 있을 경우 villainscode@gmail.com으로 메일 부탁드립니다.
+> 현재 버전 1.0.0v (2024.05.09)
+> - 개정 이력 
+>  - 더 다양한 코드 용례를 추가할 때 마다 개정 이력은 업데이트 될 예정입니다.
+> 
 > - Instagram - [https://www.instagram.com/codevillains](https://www.instagram.com/codevillains)
 > - email - [villainscode@gmail.com](mailto:villainscode@gmail.com)
 > - Yes24 - https://www.yes24.com/Product/Goods/125554439
