@@ -5,7 +5,7 @@
 > 만약 내용에 문제가 있거나 오/탈자가 있을 경우 villainscode@gmail.com으로 메일 부탁드립니다.
 > - Instagram - [https://www.instagram.com/codevillains](https://www.instagram.com/codevillains)
 > - email - [villainscode@gmail.com](mailto:villainscode@gmail.com)
-> - Yes24 - https://www.yes24.com/Product/Goods/125554439>
+> - Yes24 - https://www.yes24.com/Product/Goods/125554439
 > - KyoboBooks - https://product.kyobobook.co.kr/detail/S000212738756
 
 
@@ -15,11 +15,16 @@
 ## 들어가기에 앞서 
 이 내용은 아래의 서적과 링크를 참고하여 작성하였다. 각종 예제 코드들은 개인 코드를 포함하여 챗GPT의 도움을 받았다.(Special thanks to ChatGPT)
 
+## 소개
+
+![책소개](./book_600.png)
+
+
 >
-> 서적 및 링크 
+> 참고 서적 및 링크 
 > - Effective Java 3/E (Joshua Bloch) 
 > - Clean Code (Robert C. Martin)
-> - [개발자 기술 면접 노트](https://github.com/villainscode) (Technical Interview Notes for Java Developers, Hanbit Media, Korea, Code Villains)
+> - [개발자 기술 면접 노트](https://github.com/villainscode) (Technical Interview Notes for Java Developers, Hanbit Media 2024.03.25,  Code Villains)
 > - https://google.github.io/styleguide/javaguide.html
 > - https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
 
@@ -1161,7 +1166,7 @@ var user = userConverter.convertFromDto(dtoUser);
 
 ![그림 1-2](./converter.png)
 
-그림 1
+그림 2
 
 UserConvert 를 통해 dto와 entity 사이의 양방향 변환을 좀 더 명확하고 심플하게 처리할  수 있다.
 
