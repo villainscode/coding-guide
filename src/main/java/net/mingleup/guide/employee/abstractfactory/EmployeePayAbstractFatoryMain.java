@@ -1,5 +1,9 @@
 package net.mingleup.guide.employee.abstractfactory;
 
+/**
+ * @author CodeVillains
+ * @description :
+ */
 public class EmployeePayAbstractFatoryMain {
 
     public static void main(String[] args) {

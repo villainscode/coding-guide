@@ -4,7 +4,8 @@ package net.mingleup.guide.employee.abstractfactory;
  * @author CodeVillains
  * @description :
  */
-class PayCalculatorFactory {
+public class PayCalculatorFactory {
+
     static PayCalculator createPayCalculator(String employeeType) {
         switch (employeeType) {
             case "Regular":
@@ -19,5 +20,4 @@ class PayCalculatorFactory {
                 return null;
         }
     }
-
 }

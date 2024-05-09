@@ -1,5 +1,9 @@
 package net.mingleup.guide.employee.strategy;
 
+/**
+ * @author CodeVillains
+ * @description :
+ */
 public class EmployeePayStrategyMain {
     public static void main(String[] args) {
         String employeeType = "Contract";

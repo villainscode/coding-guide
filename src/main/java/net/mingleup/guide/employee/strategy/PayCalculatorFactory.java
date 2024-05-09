@@ -3,6 +3,10 @@ package net.mingleup.guide.employee.strategy;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author CodeVillains
+ * @description :
+ */
 public class PayCalculatorFactory {
     private static final Map<String, PayCalculator> calculatorMap = new HashMap<>();
 
