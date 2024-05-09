@@ -17,7 +17,7 @@
 
 ## 소개
 
-![책소개](./book_600.png)
+<img src="./book_600.png" width="500">
 
 
 >
