@@ -13,7 +13,7 @@
 # 📖 코딩 가이드 
 
 ## 들어가기에 앞서 
-이 내용은 아래의 서적과 링크를 참고하여 작성하였다. 각종 예제 코드들은 개인 코드를 포함하여 챗GPT의 도움을 받았다.(Special thanks to ChatGPT)
+이 내용은 아래의 서적과 링크를 참고하여 작성하였다. 각종 예제 코드들은 개인 코드를 포함하여 챗GPT의 도움을 받았다.
 
 ## 소개
 
@@ -27,6 +27,7 @@
 > - [개발자 기술 면접 노트](https://github.com/villainscode) (Technical Interview Notes for Java Developers, Hanbit Media 2024.03.25,  Code Villains)
 > - https://google.github.io/styleguide/javaguide.html
 > - https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
+> - ChatGPT
 
 # 코딩 가이드 개요 
 <aside>
