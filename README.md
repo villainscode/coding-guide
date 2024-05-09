@@ -60,12 +60,12 @@
   + [규칙 2. 패키지 이름은 소문자이고, 언더라인을 쓰지 않는다.](#---2----------------------------)
   + [규칙 3. 클래스 이름은 UpperCamelCase (PascalCase) 로 작성한다. 단어와 단어 사이에는 대문자로 표기하고 명사로 명명한다.](#---3---------uppercamelcase--pascalcase---------------------------------------)
   + [규칙 4 .메소드 이름은 lowerCamelCase 로 작성한다. 메소드명은 동사 또는 동사구이다.](#---4---------lowercamelcase-------------------------)
-  + [규칙 5. 너무 짧은 변수명, 메소드명은 지양하고 의미있는 이름으로 지어야 한다. 메소드 명이나 변수명은 의미를 전달하는 용도**로 작성해야 한다.](#---5---------------------------------------------------------------------------)
+  + [규칙 5. 너무 짧은 변수명, 메소드명은 지양하고 의미있는 이름으로 지어야 한다. 메소드 명이나 변수명은 의미를 전달하는 용도 로 작성해야 한다.](#---5---------------------------------------------------------------------------)
   + [규칙 6. 상수는 CONST_CASE 이다. (UPPER_SNAKE_CASE)](#---6-----const-case-----upper-snake-case-)
   + [규칙 7. 상수가 아닌 필드는 lowerCamelCase로 작성한다.](#---7------------lowercamelcase------)
   + [규칙 8. 변수는 lowerCamelCase로 작성한다.](#---8-----lowercamelcase------)
 - [Usage (코드 예제 모음)](#usage-----------)
-  + [1. 괄호는 Egyptian brackets 을 따른다.**](#1-------egyptian-brackets--------)
+  + [1. 괄호는 Egyptian brackets 을 따른다. ](#1-------egyptian-brackets--------)
   + [2.  빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다. ](#2----------block-like-construct---------------------------------------)
   + [3.  공백과 빈줄 ](#3-----------)
   + [4.  Static Factory Method 의 관행적인 명명 ](#4---static-factory-method------------)
@@ -83,7 +83,7 @@
   + [16.  짧은 try ~ catch 블럭 권장 ](#16------try---catch--------)
   + [17.  SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다. ](#17---springframework------------util--------------)
   + [18.  Spring Annotation의 적절한 사용 ](#18---spring-annotation----------)
-  * [DTO (Converter vs Mapper)](#dto--converter-vs-mapper-)
+- [DTO (Converter vs Mapper)](#dto--converter-vs-mapper-)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -123,7 +123,7 @@
 </aside>
 
 # 일반적인 자바 코딩 규칙 
-**** 
+   
 ## 기본적인 용어 
 >
 > - Value Object : 비즈니스 용어를 나타내는 불변 객체
@@ -183,16 +183,16 @@
 ## 좋은 코드를 작성하는 몇가지 규칙들
 
 1. 보이스카우트 규칙 : 캠프장은 처음 왔을 때보다 더 깨끗하게 해놓고 떠나라.
-    1. 변수 이름을 명확히 하고
-    2. 조금 긴 메서드는 분할하고
-    3. 약간의 중복을 제거하고
-    4. 복잡한 if 문 하나를 정리하고…
+- 변수 이름을 명확히 하고
+- 조금 긴 메서드는 분할하고
+- 약간의 중복을 제거하고
+- 복잡한 if 문 하나를 정리하고…
 2. 객체 지향 설계의 다섯가지 원칙
-    1. SRP(Single Responsibility Principle) : 클래스에는 한 가지 변경 이유만 존재해야 한다.
-    2. OCP(Open Closed Principle) : 클래스는 확장에 열려 있어야 하며 변경에 닫혀 있어야 한다.
-    3. LSP(Liskov Substitution Principle) : 상속받은 클래스는 기초 클래스를 대체할 수 있어야 한다.
-    4. DIP(Dependency Inversion Principle) : 추상화는 의존해야 하며, 구체화는 의존하면 안된다.
-    5. ISP(Interface Segregation Principle) : 클라이언트가 필요로 하는 기능만을 제공한다. (불필요한 기능들을 분리하여 인터페이스를 작게 유지해야 한다)
+- SRP(Single Responsibility Principle) : 클래스에는 한 가지 변경 이유만 존재해야 한다.
+- OCP(Open Closed Principle) : 클래스는 확장에 열려 있어야 하며 변경에 닫혀 있어야 한다.
+- LSP(Liskov Substitution Principle) : 상속받은 클래스는 기초 클래스를 대체할 수 있어야 한다.
+- DIP(Dependency Inversion Principle) : 추상화는 의존해야 하며, 구체화는 의존하면 안된다.
+- ISP(Interface Segregation Principle) : 클라이언트가 필요로 하는 기능만을 제공한다. (불필요한 기능들을 분리하여 인터페이스를 작게 유지해야 한다)
 
 # 의미 있는 이름
 
@@ -905,7 +905,7 @@ static final String[] nonEmptyArray = {"these", "can", "change"};
 
 ---
 
-### 1. 괄호는 **Egyptian brackets 을 따른다.**
+### 1. 괄호는 Egyptian brackets 을 따른다. 
 
 ```java
 return () -> {
@@ -931,7 +931,7 @@ return new MyClass() {
 };
 ```
 
-### 2. **빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다.**
+### 2.  빈 블럭이나 block-like construct 는 아래와 같이 사용 가능하지만 멀티 블럭에 섞어서 사용할순 없다. 
 
 ```java
 // 가능
@@ -946,14 +946,14 @@ try {
 } catch (Exception e) {}
 ```
 
-### 3. **공백과 빈줄**
+### 3.  공백과 빈줄 
 
 - 들여쓰기 (Indentation)은 4칸의 공백이어야 한다. (4 spaces key)
 - “if”, “while”, “return”, “catch”, “switch”, “for” 등의 키워드와 이어지는 괄호에는 공백이 있어야 한다.
 - 세미콜론, 쉼표 뒤에는 공백이 있어야 한다.
 - 코드의 주요 부분을 식별하기 위해 빈 줄을 넣어준다. 예를 들어, 변수 선언 부분과 변수를 이용한 로직이 들어간다면 이 부분은 구분을 해주기 위해 빈 줄을 삽입해주는것이 좋다.
 
-### 4. **Static Factory Method 의 관행적인 명명**
+### 4.  Static Factory Method 의 관행적인 명명 
 
 - from: 하나의 매개변수를 받아서 해당 타입의 인스턴스를 생성 (형변환)
 - valueOf : 매개변수와 동일한 값을 갖는 인스턴스를 반환
@@ -964,7 +964,7 @@ try {
 - getType: getInstance와 같으나 호출하는 클래스가 아닌 다른 타입의 인스턴스를 반환할때 사용
 - newType — newInstance와 비슷하지만 호출하는 클래스가 아닌 다른 타입의 인스턴슬 반환할 때 사용. Type은 팩토리 메서드에서 반환된 객체의 유형을 나타낸다.
 
-### 5. **List 타입에서 빈 컬렉션을 반환할때는 null이나 new 생성 리스트 타입 보다는 Empty Collection을 사용하는것이 GC에 유리하다.**
+### 5.  List 타입에서 빈 컬렉션을 반환할때는 null이나 new 생성 리스트 타입 보다는 Empty Collection을 사용하는것이 GC에 유리하다. 
 
 ```java
 List<Integer> list = new ArrayList();
@@ -978,7 +978,7 @@ Set<Integer> set = Collections.emptySet();
 Map<Integer,Integer> map = Collections.emptyMap()
 ```
 
-### 6. **foreach 루프에서 콜렉션의 요소를 추가하거나 삭제하지 말것**
+### 6.  foreach 루프에서 콜렉션의 요소를 추가하거나 삭제하지 말것 
 
 - Iterator 를 통해 요소를 조작하도록 한다.
 
@@ -990,7 +990,7 @@ for (String temp : a) {
     if ("2".equals(temp)){
         a.remove(temp);
     }
-}
+} // bad 
 ```
 
 ```java
@@ -1000,10 +1000,10 @@ while (it.hasNext()) {
     if (delete condition) {              
         it.remove();       
     }
-}
+} // good 
 ```
 
-### 7. **Key, Value 콜렉션에서 null이 저장되는지 체크해두어야 한다.**
+### 7.  Key, Value 콜렉션에서 null이 저장되는지 체크해두어야 한다. 
 
 | Collection | Key | Value | Super | Note |
 | --- | --- | --- | --- | --- |
@@ -1012,7 +1012,7 @@ while (it.hasNext()) {
 | TreeMap | Null is not allowed | Null is allowed | AbstractMap | Thread-unsafe |
 | HashMap | Null is allowed | Null is allowed | AbstractMap | Thread-unsafe |
 
-### 8. **Thread**
+### 8.  Thread 
 
 의미 있는 스레드 이름은 오류 정보를 추적하는 데 도움이 되므로 스레드 또는 스레드 풀을 생성할 때 이름을 지정하기를 추천한다.
 
@@ -1030,17 +1030,17 @@ public class TimerTaskThread extends Thread {
 - 스레드 풀을 사용하면 스레드 생성 및 소멸 시간을 줄이고 시스템 리소스를 절약할 수 있다.
 - 스레드 풀을 사용하지 않으면 유사한 스레드가 많이 생성되어 "메모리 부족" 또는 오버 스위칭 문제가 발생한다.
 
-### 9. **String 타입에 적절하지 않은 데이터를 표기하지 말아야 한다.**
+### 9.  String 타입에 적절하지 않은 데이터를 표기하지 말아야 한다. 
 
 ```java
 String value = “True”; // bad
 ```
 
 ```java
-boolean value = “true”; // good 
+boolean value = true; // good 
 ```
 
-### 10. **String의 초기화에는 StringUtils.EMPTY을 사용하는 것을 권장한다.**
+### 10.  String의 초기화에는 StringUtils.EMPTY을 사용하는 것을 권장한다. 
 
 ```java
 String value = “”; // bad 
@@ -1050,7 +1050,7 @@ String value = “”; // bad
 String value = StringUtils.EMPTY; // good 
 ```
 
-### 11. **불필요한 연산은 사용하지 말자.**
+### 11.  불필요한 연산은 사용하지 말자. 
 
 ```java
 public class BadExample {
@@ -1079,7 +1079,7 @@ public class GoodExample {
 ```
 
 
-### 12. **Optional 사용**
+### 12.  Optional 사용 
 
 Exception 혹은 null을 반환하는 method에는 Optional을 사용한다.
 
@@ -1108,7 +1108,7 @@ public Optional<ExportService> getExportRequest(){
 }
 ```
 
-### 13. **Predicate과 Valdator 구분해서 사용**
+### 13.  Predicate과 Valdator 구분해서 사용 
 Predicate 와 Validator 의 용도가 다르다.
 
 Predicate
@@ -1127,7 +1127,7 @@ Predicate는 1개의 arg 을 받아서 true/false 리턴하는 용도으로 사�
 
 Validator는 데이타 유효성을 판단하는 용도으로 경우에 따라서 exception 발생시킨다. 
 
-### 14. **변수가 너무 많은 클래스 구조는 별도의 객체로 분리하자.**
+### 14.  변수가 너무 많은 클래스 구조는 별도의 객체로 분리하자. 
 
 ```java
 public class BadExample { //bad 
@@ -1142,7 +1142,6 @@ public class BadExample { //bad
 }
 ```
 
-### 15. **가급적 예외를 구체화 한다.**
 
 ```java
 public class GoodExample { // good 
@@ -1153,7 +1152,7 @@ public class GoodExample { // good
     }
 }
 ```
-
+### 15.  가급적 예외를 구체화 한다. 
 
 ```java
 public class BadExample {
@@ -1175,7 +1174,7 @@ public class GoodExample {
 }
 ```
 
-### 16. **짧은 try ~ catch 블럭 권장**
+### 16.  짧은 try ~ catch 블럭 권장 
 
 가독성면에서 try catch 블록은 짧아야 하며, 가급적 `exception`  블럭만 처리하여 가독성을 확보해야 한다.
 
@@ -1228,21 +1227,21 @@ In the second case, where an exception is caught so that it can be wrapped by an
 
 
 
-### 17. **SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다.**
+### 17.  SpringFramework 에서 제공하는 자체 Util 들은 사용하면 안된다. 
 
 - 이는 SpringFramework 내부에서 쓰고자 만든것으로, 만약 Utils성격의 클래스를 쓰고 싶다면 Apache Commons StringUtils를 사용해야 한다.
 
-### 18. **Spring Annotation의 적절한 사용**
+### 18.  Spring Annotation의 적절한 사용 
 
-- *@Component* 는 일반적인 스프링 빈으로 등록된(관리하는) 컴포넌트를 의미한다.
-- *@Service @Controller, @Repository 등은 Component 임과 동시에 세부적인 기능을 구분하는 명시를 위한 어노테이션이다.*
-- @Controller는 Presentation Layer를 담당하고, @Service는 서비스의 로직, *@Repository* 어노테이션은 DB에서 동작하는 Persistence 레이어를 표시한다.
+- @Component는 일반적인 스프링 빈으로 등록된(관리하는) 컴포넌트를 의미한다.
+- @Service @Controller, @Repository 등은 Component 임과 동시에 세부적인 기능을 구분하는 명시를 위한 어노테이션이다.
+- @Controller는 Presentation Layer를 담당하고, @Service는 서비스의 로직, @Repository 어노테이션은 DB에서 동작하는 Persistence 레이어를 표시한다.
 
 기능 역할을 명확하게 하는 레이어라면 Component 보다는 구체적인 스테레오 타입인 하위 어노테이션을 권장한다.
 
-## DTO (Converter vs Mapper)
+# DTO (Converter vs Mapper)
 
----
+
 
 실제 어플리케이션에서는 Entity 로 조회한 DB의 객체를 비즈니스 논리 계층에서 사용하기 위해 DTO에 매핑되어야 하는데 이를 치환하기 위해 수많은 DTO의 Setter, Getter  중복이 발생하게 된다. 데이터베이스의 테이블인 Entity들을 바로 API의 결과로 노출하면 안된다.
 
