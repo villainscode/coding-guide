@@ -104,7 +104,16 @@
 > - [개발자 기술 면접 노트](https://github.com/villainscode) (Technical Interview Notes for Java Developers, Hanbit Media 2024.03.25,  Code Villains)
 > - https://google.github.io/styleguide/javaguide.html
 > - https://www.oracle.com/java/technologies/javase/codeconventions-contents.html
-> - ChatGPT
+
+
+# 인프런 강의
+
+<img src="https://github.com/villainscode/DesignPattern/blob/main/image/inflean_code.jpeg" width="1000">
+
+- [시니어면접관이 알려주는 개발자 취업과 이직, 한방에 해결하기 이론편](https://www.inflearn.com/course/%EC%8B%9C%EB%8B%88%EC%96%B4-%EB%A9%B4%EC%A0%91%EA%B4%80-%EC%95%8C%EB%A0%A4%EC%A3%BC%EB%8A%94-%EC%B7%A8%EC%97%85-%EC%9D%B4%EC%A7%81-%EC%9D%B4%EB%A1%A0)
+- [시니어면접관이 알려주는 개발자 취업과 이직, 한방에 해결하기 실전편](https://www.inflearn.com/course/%EC%8B%9C%EB%8B%88%EC%96%B4-%EB%A9%B4%EC%A0%91%EA%B4%80-%EC%95%8C%EB%A0%A4%EC%A3%BC%EB%8A%94-%EC%B7%A8%EC%97%85-%EC%9D%B4%EC%A7%81-%EC%8B%A4%EC%A0%84)
+
+
 
 # 코딩 가이드 개요 
 <aside>
